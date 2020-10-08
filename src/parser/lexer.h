@@ -42,7 +42,7 @@ class Lexer {
 
   TokenStream Scanner();
 
-  inline uint NumErrors() noexcept {
+  inline unsigned int NumErrors() noexcept {
     return nerror_;
   }
 
@@ -174,13 +174,13 @@ private:
   void ErrorMsg(const boost::format& fmt_msg);
 
   std::string str_;
-  uint strlen_;
+  unsigned int strlen_;
   char c_;
-  uint buffer_cursor_;
-  uint line_;
-  uint line_pos_;
-  uint start_pos_;
-  uint nerror_;
+  unsigned int buffer_cursor_;
+  unsigned int line_;
+  unsigned int line_pos_;
+  unsigned int start_pos_;
+  unsigned int nerror_;
   Messages msgs_;
 
 };

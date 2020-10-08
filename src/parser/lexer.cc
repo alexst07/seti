@@ -56,7 +56,7 @@ std::string Lexer::ScanUnicodeEscapeCode() {
 
   Back();
 
-  uint32_t hex_number = static_cast<uint32_t>(std::stoi(number,nullptr,16));
+  unsigned int32_t hex_number = static_cast<unsigned int32_t>(std::stoi(number,nullptr,16));
 
   // initialize wstring with 1 wchar_t
   std::wstring str_hex(1, static_cast<wchar_t>(hex_number));

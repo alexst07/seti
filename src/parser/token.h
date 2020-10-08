@@ -73,21 +73,21 @@ class Token {
  public:
   using Value = boost::variant<int, std::string, float, bool>;
 
-  Token(TokenKind k, Value value, bool blank_after, uint line, uint col)
+  Token(TokenKind k, Value value, bool blank_after, unsigned int line, unsigned int col)
       : kind_(k)
       , value_(value)
       , blank_after_(blank_after)
       , line_(line)
       , col_(col) {}
 
-  Token(TokenKind k, const char* value, bool blank_after, uint line, uint col)
+  Token(TokenKind k, const char* value, bool blank_after, unsigned int line, unsigned int col)
       : kind_(k)
       , value_(std::string(value))
       , blank_after_(blank_after)
       , line_(line)
       , col_(col) {}
 
-  Token(TokenKind k, bool blank_after, uint line, uint col)
+  Token(TokenKind k, bool blank_after, unsigned int line, unsigned int col)
       : kind_(k)
       , value_(std::string(token_value_str[static_cast<int>(k)]))
       , blank_after_(blank_after)
@@ -143,9 +143,9 @@ class Token {
 
   bool BlankAfter() const noexcept { return blank_after_; }
 
-  uint Line() const noexcept { return line_; }
+  unsigned int Line() const noexcept { return line_; }
 
-  uint Col() const noexcept { return col_; }
+  unsigned int Col() const noexcept { return col_; }
 
   bool Is(TokenKind k) const noexcept { return kind_ == k; }
 
@@ -264,8 +264,8 @@ class Token {
   TokenKind kind_;
   Value value_;
   bool blank_after_;
-  uint line_;
-  uint col_;
+  unsigned int line_;
+  unsigned int col_;
 };
 
 inline std::ostream& operator<<(std::ostream& stream, Token& token) {

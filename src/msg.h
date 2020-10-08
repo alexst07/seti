@@ -33,7 +33,7 @@ class Message {
 
   Message() = delete;
 
-  Message(Severity severity, const boost::format& msg, uint line, uint pos)
+  Message(Severity severity, const boost::format& msg, unsigned int line, unsigned int pos)
       : severity_(severity)
       , msg_(msg)
       , line_(line)
@@ -62,11 +62,11 @@ class Message {
     return msg_.str();
   }
 
-  uint line() {
+  unsigned int line() {
     return line_;
   }
 
-  uint pos() {
+  unsigned int pos() {
     return pos_;
   }
 
@@ -92,8 +92,8 @@ class Message {
  private:
   Severity severity_;
   boost::format msg_;
-  uint line_;
-  uint pos_;
+  unsigned int line_;
+  unsigned int pos_;
   std::string str_line_error_;
   std::string file_;
 };

@@ -168,8 +168,8 @@ class Expression;
 
 // Position of ast node on source code
 struct Position {
-  uint line;
-  uint col;
+  unsigned int line;
+  unsigned int col;
 };
 
 const char* AstNodeStr(size_t i);
@@ -177,7 +177,7 @@ const char* AstNodeStr(size_t i);
 class AstNode {
  public:
 #define DECLARE_TYPE_ENUM(type) k##type,
-  enum class NodeType : uint8_t { AST_NODE_LIST(DECLARE_TYPE_ENUM) };
+  enum class NodeType : unsigned int8_t { AST_NODE_LIST(DECLARE_TYPE_ENUM) };
 #undef DECLARE_TYPE_ENUM
 
   virtual ~AstNode() {}

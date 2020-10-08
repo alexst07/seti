@@ -50,7 +50,7 @@ class Parser {
     return ParserExpCmd();
   }
 
-  inline uint nerrors() const {
+  inline unsigned int nerrors() const {
     return nerror_;
   }
 
@@ -350,7 +350,7 @@ class Parser {
 
   TokenStream ts_;
   AstNodeFactory factory_;
-  uint nerror_;
+  unsigned int nerror_;
   Token& token_;
   Token token_error_;
   Messages msgs_;

@@ -34,7 +34,7 @@ class Object {
   using Args = std::vector<std::shared_ptr<Object>>;
   using KWArgs = std::unordered_map<std::string, std::shared_ptr<Object>>;
 
-  enum class ObjectType: uint8_t {
+  enum class ObjectType: unsigned int8_t {
     ROOT,
     NIL,
     INT,

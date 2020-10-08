@@ -37,7 +37,7 @@ namespace internal {
  */
 class RunTimeError : public std::exception {
  public:
-  enum class ErrorCode: uint8_t{
+  enum class ErrorCode: unsigned int8_t{
     NULL_ACCESS,
     SYMBOL_NOT_FOUND,
     BAD_ALLOC,
